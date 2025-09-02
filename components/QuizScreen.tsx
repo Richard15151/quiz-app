@@ -1,13 +1,40 @@
 import React from 'react';
+import { useState } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
 
 // importando o banco de dados no json
 import questions from '../questions.json';
 
 export default function QuizScreen(){
+    //criando estado para guardar indice da pergunta atual
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
 
-    // pegando a primeira questão
-    const currentQuestion = questions[0];
+    //guarda a opção que o usuário selecionou
+    const [selectedOption, setSelectedOption] = useState<string | null>(null)
+
+    //Controla se as opções devem ser desabilitadas
+    const [isOptionsDisabled, setIsOptionsDisabled] = useState(false)
+    
+    //Usando a variável para buscar a pergunta correta 
+    const currentQuestion = questions[currentQuestionIndex]
+
+    const handleOptionPress = (selectedOption: string) => {
+        setSelectedOption(selectedOption);
+        setIsOptionsDisabled(true)
+    }
+
+    const getOptionStyle = (option: string) =>{
+        if (selectedOption){
+            const isCorrect = option === currentQuestion.correctAnswer
+            if (isCorrect){
+                return styles.correctOption
+            }
+            if (option === selectedOption && !isCorrect){
+                return styles.incorrectOption
+            }
+        }
+        return{}
+    }
 
     return (
         <View style={styles.container}>
@@ -24,7 +51,8 @@ export default function QuizScreen(){
                 {/* usamos o .map() para criar um botão para cada item do array */}
                 {/* Usamos TouchableOpacity para dar feedback de toque */}
                 {currentQuestion.options.map((option) =>(
-                    <TouchableOpacity key={option} style={styles.option}>
+                    <TouchableOpacity key={option} style={[styles.option, getOptionStyle(option)]} onPress={() => handleOptionPress(option)}
+                    disabled={isOptionsDisabled}>
                         <Text style={styles.optionText}>{option}</Text>
                     </TouchableOpacity>
 
@@ -67,4 +95,14 @@ const styles = StyleSheet.create({
     optionText: {
         fontSize: 18,
     },
+    correctOption:{
+        borderColor: '#4CAF50', // Verde
+        backgroundColor: '#D4EDDA',
+        borderWidth: 2,
+    },
+    incorrectOption:{
+        borderColor: '#F44336', // Vermelho
+        backgroundColor: '#F8D7DA',
+        borderWidth: 2,
+    }
 });
