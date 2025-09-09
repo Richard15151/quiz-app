@@ -1,22 +1,52 @@
 [
   {
-    "question": "Qual dos seguintes é um Hook do React?",
-    "options": ["useState", "useReducer", "useEffect", "Todos acima"],
-    "correctAnswer": "Todos acima"
+    "question": "Quanto é 7 × 8?",
+    "options": ["54", "56", "64", "58"],
+    "correctAnswer": "56"
   },
   {
-    "question": "Qual componente é usado para exibir texto no React Native?",
-    "options": ["<TextView>", "<p>", "<Text>", "<Label>"],
-    "correctAnswer": "<Text>"
+    "question": "Se cada caixa tem 6 garrafas e João comprou 9 caixas, quantas garrafas ele tem?",
+    "options": ["52", "54", "56", "60"],
+    "correctAnswer": "54"
   },
   {
-    "question": "No Flexbox do React Native, qual é o valor padrão de `flexDirection`?",
-    "options": ["row", "column", "row-reverse", "column-reverse"],
-    "correctAnswer": "column"
+    "question": "Qual é o resultado de 12 × 11?",
+    "options": ["121", "132", "142", "124"],
+    "correctAnswer": "132"
   },
   {
-    "question": "Qual arquivo de configuração define o nome e o ícone de um app Expo?",
-    "options": ["package.json", "tsconfig.json", "app.json", "expo.config.js"],
-    "correctAnswer": "app.json"
+    "question": "Uma sala tem 15 mesas, cada mesa com 4 cadeiras. Quantas cadeiras há ao todo?",
+    "options": ["60", "65", "70", "75"],
+    "correctAnswer": "60"
+  },
+  {
+    "question": "Qual é o resultado de 18 × 7?",
+    "options": ["116", "126", "128", "136"],
+    "correctAnswer": "126"
+  },
+  {
+    "question": "Se cada ônibus transporta 45 pessoas e 8 ônibus estão lotados, quantas pessoas foram transportadas?",
+    "options": ["340", "350", "360", "370"],
+    "correctAnswer": "360"
+  },
+  {
+    "question": "Quanto é 25 × 16?",
+    "options": ["375", "400", "425", "450"],
+    "correctAnswer": "400"
+  },
+  {
+    "question": "Qual é o produto de 32 × 19?",
+    "options": ["608", "612", "620", "590"],
+    "correctAnswer": "608"
+  },
+  {
+    "question": "Se uma fábrica produz 250 peças por dia, quantas peças serão produzidas em 24 dias?",
+    "options": ["5900", "6000", "6100", "6200"],
+    "correctAnswer": "6000"
+  },
+  {
+    "question": "Calcule 125 × 48.",
+    "options": ["5800", "5900", "6000", "6100"],
+    "correctAnswer": "6000"
   }
 ]

@@ -1,89 +1,97 @@
-import React from 'react';
-import { useState } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-// importando o banco de dados no json
-import questions from '../questions.json';
 
-export default function QuizScreen(){
-    //criando estado para guardar indice da pergunta atual
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
 
-    //guarda a opção que o usuário selecionou
-    const [selectedOption, setSelectedOption] = useState<string | null>(null)
+// Definimos o formato de um objeto de pergunta para reutilizar o tipo
+type Question = {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+};
 
-    //Controla se as opções devem ser desabilitadas
-    const [isOptionsDisabled, setIsOptionsDisabled] = useState(false)
-    
-    //Usando a variável para buscar a pergunta correta 
-    const currentQuestion = questions[currentQuestionIndex]
+// Definimos o formato exato das props que o componente espera
+type QuizScreenProps = {
+  currentQuestion: Question;
+  selectedOption: string | null;
+  isOptionsDisabled: boolean;
+  onOptionPress: (option: string) => void;
+  onNextQuestion: () => void;
+};
 
-    const handleOptionPress = (selectedOption: string) => {
-        setSelectedOption(selectedOption);
-        setIsOptionsDisabled(true)
+
+// Aplicamos a tipagem aqui na assinatura da função
+export default function QuizScreen({
+  currentQuestion,
+  selectedOption,
+  isOptionsDisabled,
+  onOptionPress,
+  onNextQuestion,
+}: QuizScreenProps) {
+
+  const getOptionStyle = (option: string) => {
+    if (selectedOption) {
+      const isCorrect = option === currentQuestion.correctAnswer;
+      if (isCorrect) {
+        return styles.correctOption;
+      }
+      if (option === selectedOption && !isCorrect) {
+        return styles.incorrectOption;
+      }
     }
+    return {};
+  };
 
-    const getOptionStyle = (option: string) =>{
-        if (selectedOption){
-            const isCorrect = option === currentQuestion.correctAnswer
-            if (isCorrect){
-                return styles.correctOption
-            }
-            if (option === selectedOption && !isCorrect){
-                return styles.incorrectOption
-            }
-        }
-        return{}
-    }
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.questionContainer}>
+        <Text style={styles.questionText}>{currentQuestion.question}</Text>
+      </View>
 
-    return (
-        <View style={styles.container}>
-            {/* Container para a pergunta */}
-            <View style={styles.questionContainer}>
-                {/* exibindo a questão como propiedade question */}
-                <Text style={styles.questionText}>
-                    {currentQuestion.question}
-                </Text>
-            </View>
+      <View style={styles.optionsContainer}>
+        {currentQuestion.options.map((option) => (
+          <TouchableOpacity
+            key={option}
+            style={[styles.option, getOptionStyle(option)]}
+            onPress={() => onOptionPress(option)}
+            disabled={isOptionsDisabled}
+          >
+            <Text style={styles.optionText}>{option}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
 
-            {/* Container para as Alternativas */}
-            <View style={styles.optionsContainer}>
-                {/* usamos o .map() para criar um botão para cada item do array */}
-                {/* Usamos TouchableOpacity para dar feedback de toque */}
-                {currentQuestion.options.map((option) =>(
-                    <TouchableOpacity key={option} style={[styles.option, getOptionStyle(option)]} onPress={() => handleOptionPress(option)}
-                    disabled={isOptionsDisabled}>
-                        <Text style={styles.optionText}>{option}</Text>
-                    </TouchableOpacity>
-
-                ))}
-            </View>
-        </View>
-    );
+      {selectedOption && (
+        <TouchableOpacity style={styles.nextButton} onPress={onNextQuestion}>
+          <Text style={styles.nextButtonText}>Próxima Pergunta</Text>
+        </TouchableOpacity>
+      )}
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, //Faz o container principal ocupar a tela inteira
+        flex: 1,
         backgroundColor: '#f0f8ff',
-        padding: 16, // Um espaçamento geral nas bordas da tela
+        padding: 20,
     },
     questionContainer: {
-        flex: 1, //Faz este container ocupar metade do espaço disponível
+        flex: 1,
         backgroundColor: '#ffffff',
         borderRadius: 12,
         padding: 16,
-        justifyContent: 'center', // Centraliza o conteúdo (o Text) na vertical
-        marginBottom:20, // Uma margem para separar da área de opções
+        justifyContent: 'center',
+        marginBottom:20,
     },
     questionText:{
         fontSize: 20,
         fontWeight: 'bold',
-        textAlign: 'center', // Centraliza o texto dentro do componente Text
+        textAlign: 'center',
     },
     optionsContainer: {
-        flex: 1, // Faz este computador ocupar a outra metade do espaço
-        justifyContent: 'space-around', // Distribui as opções com espaço igual ao redor
+        flex: 1,
+        justifyContent: 'space-around',
     },
     option: {
         backgroundColor: '#ffffff',
@@ -96,13 +104,33 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     correctOption:{
-        borderColor: '#4CAF50', // Verde
+        borderColor: '#4CAF50',
         backgroundColor: '#D4EDDA',
         borderWidth: 2,
     },
     incorrectOption:{
-        borderColor: '#F44336', // Vermelho
+        borderColor: '#F44336',
         backgroundColor: '#F8D7DA',
         borderWidth: 2,
-    }
+    },
+    nextButton:{
+        backgroundColor: '#007BFF',
+        padding: 15,
+        borderRadius: 12,
+        marginTop:20,
+        alignItems: 'center',
+    },
+    nextButtonText:{
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#ffffff',
+    },
+    scoreContainer: {
+        marginBottom: 20,
+    },
+    scoreText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
 });

@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "quiz-app",
-    "slug": "quiz-app",
+    "name": "MathMagic",
+    "slug": "MathMagic",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logoAPP.png",
     "scheme": "quizapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.richard117.quizapp"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +38,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f8a9a9c7-8b81-4d67-844d-80b47c0f4053"
+      }
     }
   }
 }
