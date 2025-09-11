@@ -9,12 +9,22 @@ type ResultScreenProps = {
 }
 
 export default function ResultScreen({ score, totalQuestions, onPlayAgain}: ResultScreenProps){
+    const getResultMessage = () => {
+    const percentage = (score / totalQuestions) * 100;
+
+    if (percentage === 100) return "🏆 Perfeito! Você é um mestre da multiplicação!";
+    if (percentage >= 70) return "🔥 Mandou bem! Quase lá!";
+    if (percentage >= 40) return "🙂 Bom esforço, continue praticando!";
+    return "😵 Opa! Bora treinar mais um pouquinho!";
+  };
+
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Fim de Jogo!</Text>
             <Text style={styles.scoreText}>
                 Você acertou {score} de {totalQuestions} perguntas!
             </Text>
+            <Text style={styles.resultMessage}>{getResultMessage()}</Text>
             <TouchableOpacity style={styles.button} onPress={onPlayAgain}>
                 <Text style={styles.buttonText}>Jogar Novamente</Text>
             </TouchableOpacity>
@@ -59,5 +69,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.5,
   },
+  resultMessage: {
+    fontSize: 22,
+    fontWeight: '600',
+    color: '#333',
+    textAlign: 'center',
+    marginBottom: 30,
+  },
+
 });
 

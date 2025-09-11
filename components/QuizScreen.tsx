@@ -17,8 +17,9 @@ type QuizScreenProps = {
   isOptionsDisabled: boolean;
   onOptionPress: (option: string) => void;
   onNextQuestion: () => void;
+  currentQuestionIndex: number;
+  totalQuestions: number;
 };
-
 
 // Aplicamos a tipagem aqui na assinatura da função
 export default function QuizScreen({
@@ -27,6 +28,8 @@ export default function QuizScreen({
   isOptionsDisabled,
   onOptionPress,
   onNextQuestion,
+  currentQuestionIndex,
+  totalQuestions
 }: QuizScreenProps) {
 
   const getOptionStyle = (option: string) => {
@@ -44,6 +47,14 @@ export default function QuizScreen({
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.progressContainer}>
+        <View
+          style={[
+            styles.progressBar,
+            { width: `${((currentQuestionIndex + 1) / totalQuestions) * 100}%` },
+          ]}
+        />
+      </View>
       <View style={styles.questionContainer}>
         <Text style={styles.questionText}>{currentQuestion.question}</Text>
       </View>
@@ -132,5 +143,22 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         textAlign: 'center',
+    },
+    progressContainer: {
+      height: 12,
+      backgroundColor: '#e0e0e0',
+      borderRadius: 6,
+      overflow: 'hidden',
+      marginBottom: 10,
+    },
+    progressBar: {
+      height: '100%',
+      backgroundColor: '#007BFF',
+    },
+    progressText: {
+      fontSize: 16,
+      fontWeight: '600',
+      textAlign: 'center',
+      marginBottom: 20,
     },
 });

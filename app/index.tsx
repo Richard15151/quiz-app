@@ -3,6 +3,7 @@ import QuizScreen from '../components/QuizScreen';
 import ResultScreen from '../components/ResultScreen';
 import questions from '../questions.json';
 import { Audio } from 'expo-av';
+import { Vibration } from 'react-native';
 
 // Função para tocar o som de acerto
 async function playCorrectSound() {
@@ -41,6 +42,7 @@ export default function HomePage() {
       playCorrectSound()
     }else{
       playWrongSound()
+      Vibration.vibrate(400)
     }
     setSelectedOption(option);
     setIsOptionsDisabled(true);
@@ -78,6 +80,8 @@ export default function HomePage() {
       isOptionsDisabled={isOptionsDisabled}
       onOptionPress={handleOptionPress}
       onNextQuestion={handleNextQuestion}
+      currentQuestionIndex={currentQuestionIndex}
+      totalQuestions={questions.length}
     />
   );
 }

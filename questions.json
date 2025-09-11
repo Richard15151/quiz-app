@@ -20,33 +20,33 @@
     "correctAnswer": "60"
   },
   {
-    "question": "Qual é o resultado de 18 × 7?",
-    "options": ["116", "126", "128", "136"],
-    "correctAnswer": "126"
+    "question": "Qual é o resultado de 12 × 7?",
+    "options": ["116", "74", "84", "92"],
+    "correctAnswer": "84"
   },
   {
-    "question": "Se cada ônibus transporta 45 pessoas e 8 ônibus estão lotados, quantas pessoas foram transportadas?",
-    "options": ["340", "350", "360", "370"],
-    "correctAnswer": "360"
+    "question": "Se cada ônibus transporta 45 pessoas e 4 ônibus estão lotados, quantas pessoas foram transportadas?",
+    "options": ["180", "200", "160", "190"],
+    "correctAnswer": "180"
   },
   {
-    "question": "Quanto é 25 × 16?",
-    "options": ["375", "400", "425", "450"],
-    "correctAnswer": "400"
+    "question": "Quanto é 25 × 6?",
+    "options": ["180", "150", "100", "300"],
+    "correctAnswer": "150"
   },
   {
-    "question": "Qual é o produto de 32 × 19?",
-    "options": ["608", "612", "620", "590"],
-    "correctAnswer": "608"
+    "question": "Qual é o produto de 32 × 6?",
+    "options": ["200", "182", "202", "192"],
+    "correctAnswer": "192"
   },
   {
-    "question": "Se uma fábrica produz 250 peças por dia, quantas peças serão produzidas em 24 dias?",
-    "options": ["5900", "6000", "6100", "6200"],
-    "correctAnswer": "6000"
+    "question": "Se uma fábrica produz 250 peças por dia, quantas peças serão produzidas em 10 dias?",
+    "options": ["2000", "1800", "2500", "3000"],
+    "correctAnswer": "2500"
   },
   {
-    "question": "Calcule 125 × 48.",
-    "options": ["5800", "5900", "6000", "6100"],
-    "correctAnswer": "6000"
+    "question": "Calcule 125 × 4.",
+    "options": ["500", "900", "800", "600"],
+    "correctAnswer": "500"
   }
 ]
