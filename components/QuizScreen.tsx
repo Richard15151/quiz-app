@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View, TouchableOpacity, } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Animated } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
+import { useEffect, useRef } from "react";
 
 
 // Definimos o formato de um objeto de pergunta para reutilizar o tipo
@@ -32,6 +32,17 @@ export default function QuizScreen({
   totalQuestions
 }: QuizScreenProps) {
 
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  //UseEffect para dar fad in na pergunta
+  useEffect(() => {
+    fadeAnim.setValue(0);
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true,
+    }).start();
+  }, [currentQuestionIndex]);
+
   const getOptionStyle = (option: string) => {
     if (selectedOption) {
       const isCorrect = option === currentQuestion.correctAnswer;
@@ -55,9 +66,9 @@ export default function QuizScreen({
           ]}
         />
       </View>
-      <View style={styles.questionContainer}>
+      <Animated.View style={[styles.questionContainer, { opacity: fadeAnim }]}>
         <Text style={styles.questionText}>{currentQuestion.question}</Text>
-      </View>
+      </Animated.View>
 
       <View style={styles.optionsContainer}>
         {currentQuestion.options.map((option) => (

@@ -12,7 +12,7 @@ export default function ResultScreen({ score, totalQuestions, onPlayAgain}: Resu
     const getResultMessage = () => {
     const percentage = (score / totalQuestions) * 100;
 
-    if (percentage === 100) return "🏆 Perfeito! Você é um mestre da multiplicação!";
+    if (percentage === 100) return "🏆 Perfeito! Você é um mestre das operações!";
     if (percentage >= 70) return "🔥 Mandou bem! Quase lá!";
     if (percentage >= 40) return "🙂 Bom esforço, continue praticando!";
     return "😵 Opa! Bora treinar mais um pouquinho!";

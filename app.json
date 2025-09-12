@@ -2,7 +2,7 @@
   "expo": {
     "name": "MathMagic",
     "slug": "quiz-app",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/logoAPP.png",
     "scheme": "quizapp",
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/logoAPP.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,

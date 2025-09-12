@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Text } from 'react-native'
 import QuizScreen from '../components/QuizScreen';
 import ResultScreen from '../components/ResultScreen';
+import rawQuestions from '../questions.json';
 import questions from '../questions.json';
 import { Audio } from 'expo-av';
 import { Vibration } from 'react-native';
@@ -27,13 +29,38 @@ async function playWinSound() {
   await sound.playAsync();
 }
 
+//função para embaralhar as perguntas
+function shuffleArray<T>(array: T[]): T[] {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+}
+
+function getRandomQuestions(allQuestions: typeof rawQuestions, num: number) {
+  const shuffled = shuffleArray(allQuestions);
+  return shuffled.slice(0, num).map(q => ({
+    ...q,
+    options: shuffleArray(q.options), // embaralha as opções também
+  }));
+}
+
+
 export default function HomePage() {
+  const [questions, setQuestions] = useState<typeof rawQuestions>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isOptionsDisabled, setIsOptionsDisabled] = useState(false);
   const [score, setScore] = useState(0);
   const [isQuizFinished, setIsQuizFinished] = useState(false);
 
+  useEffect(() => {
+  // embaralha e pega 10 perguntas no início
+  setQuestions(getRandomQuestions(rawQuestions, 10));
+  }, []);
+  
   const currentQuestion = questions[currentQuestionIndex];
 
   const handleOptionPress = (option: string) => {
@@ -60,13 +87,17 @@ export default function HomePage() {
   };
 
   const handlePlayAgain = () => {
+    setQuestions(getRandomQuestions(rawQuestions, 10)); // pega apenas 10 perguntas
+
     setIsQuizFinished(false);
     setCurrentQuestionIndex(0);
     setSelectedOption(null);
     setIsOptionsDisabled(false);
     setScore(0);
-  };
-
+    };
+    if (questions.length === 0) {
+    return <Text>Carregando perguntas...</Text>;
+  }
   return isQuizFinished ? (
     <ResultScreen
       score={score}

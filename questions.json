@@ -1,52 +1,59 @@
 [
-  {
-    "question": "Quanto é 7 × 8?",
-    "options": ["54", "56", "64", "58"],
-    "correctAnswer": "56"
-  },
-  {
-    "question": "Se cada caixa tem 6 garrafas e João comprou 9 caixas, quantas garrafas ele tem?",
-    "options": ["52", "54", "56", "60"],
-    "correctAnswer": "54"
-  },
-  {
-    "question": "Qual é o resultado de 12 × 11?",
-    "options": ["121", "132", "142", "124"],
-    "correctAnswer": "132"
-  },
-  {
-    "question": "Uma sala tem 15 mesas, cada mesa com 4 cadeiras. Quantas cadeiras há ao todo?",
-    "options": ["60", "65", "70", "75"],
-    "correctAnswer": "60"
-  },
-  {
-    "question": "Qual é o resultado de 12 × 7?",
-    "options": ["116", "74", "84", "92"],
-    "correctAnswer": "84"
-  },
-  {
-    "question": "Se cada ônibus transporta 45 pessoas e 4 ônibus estão lotados, quantas pessoas foram transportadas?",
-    "options": ["180", "200", "160", "190"],
-    "correctAnswer": "180"
-  },
-  {
-    "question": "Quanto é 25 × 6?",
-    "options": ["180", "150", "100", "300"],
-    "correctAnswer": "150"
-  },
-  {
-    "question": "Qual é o produto de 32 × 6?",
-    "options": ["200", "182", "202", "192"],
-    "correctAnswer": "192"
-  },
-  {
-    "question": "Se uma fábrica produz 250 peças por dia, quantas peças serão produzidas em 10 dias?",
-    "options": ["2000", "1800", "2500", "3000"],
-    "correctAnswer": "2500"
-  },
-  {
-    "question": "Calcule 125 × 4.",
-    "options": ["500", "900", "800", "600"],
-    "correctAnswer": "500"
-  }
+
+  { "question": "Quanto é 7 × 8?", "options": ["54", "56", "64", "58"], "correctAnswer": "56" },
+  { "question": "Qual é o resultado de 12 × 11?", "options": ["121", "132", "142", "124"], "correctAnswer": "132" },
+  { "question": "Calcule 15 × 9.", "options": ["135", "140", "130", "125"], "correctAnswer": "135" },
+  { "question": "Quanto é 16 × 6?", "options": ["96", "92", "100", "98"], "correctAnswer": "96" },
+  { "question": "Calcule 21 × 3.", "options": ["63", "60", "66", "69"], "correctAnswer": "63" },
+  { "question": "Quanto é 11 × 11?", "options": ["121", "111", "112", "120"], "correctAnswer": "121" },
+  { "question": "Calcule 13 × 7.", "options": ["91", "92", "87", "95"], "correctAnswer": "91" },
+  { "question": "Quanto é 12 × 7?", "options": ["116", "74", "84", "92"], "correctAnswer": "84" },
+  { "question": "Calcule 14 × 5.", "options": ["60", "70", "75", "65"], "correctAnswer": "70" },
+  { "question": "Calcule 17 × 6.", "options": ["102", "100", "105", "110"], "correctAnswer": "102" },
+
+  { "question": "Quanto é 56 ÷ 7?", "options": ["7", "8", "6", "9"], "correctAnswer": "8" },
+  { "question": "Divida 132 por 12.", "options": ["10", "11", "12", "13"], "correctAnswer": "11" },
+  { "question": "Quanto é 81 ÷ 9?", "options": ["8", "9", "7", "10"], "correctAnswer": "9" },
+  { "question": "Calcule 144 ÷ 12.", "options": ["11", "12", "13", "10"], "correctAnswer": "12" },
+  { "question": "Divida 90 por 5.", "options": ["18", "15", "20", "16"], "correctAnswer": "18" },
+  { "question": "Quanto é 72 ÷ 8?", "options": ["8", "9", "10", "7"], "correctAnswer": "9" },
+  { "question": "Calcule 100 ÷ 4.", "options": ["25", "20", "30", "24"], "correctAnswer": "25" },
+  { "question": "Divida 64 por 8.", "options": ["7", "8", "9", "6"], "correctAnswer": "8" },
+  { "question": "Quanto é 81 ÷ 3?", "options": ["26", "27", "28", "25"], "correctAnswer": "27" },
+  { "question": "Divida 56 por 8.", "options": ["6", "7", "8", "9"], "correctAnswer": "7" },
+
+  { "question": "Quanto é 45 + 27?", "options": ["72", "70", "74", "73"], "correctAnswer": "72" },
+  { "question": "Calcule 123 + 56.", "options": ["179", "180", "178", "175"], "correctAnswer": "179" },
+  { "question": "Quanto é 87 + 36?", "options": ["123", "122", "124", "121"], "correctAnswer": "123" },
+  { "question": "Calcule 99 + 45.", "options": ["144", "143", "145", "142"], "correctAnswer": "144" },
+  { "question": "Quanto é 150 + 75?", "options": ["225", "220", "230", "215"], "correctAnswer": "225" },
+  { "question": "Calcule 34 + 88.", "options": ["122", "120", "121", "123"], "correctAnswer": "122" },
+  { "question": "Quanto é 67 + 29?", "options": ["96", "95", "97", "94"], "correctAnswer": "96" },
+  { "question": "Calcule 58 + 67.", "options": ["125", "124", "126", "123"], "correctAnswer": "125" },
+  { "question": "Quanto é 49 + 51?", "options": ["100", "99", "101", "98"], "correctAnswer": "100" },
+  { "question": "Calcule 76 + 18.", "options": ["94", "93", "95", "96"], "correctAnswer": "94" },
+
+
+  { "question": "Quanto é 87 − 29?", "options": ["57", "58", "59", "60"], "correctAnswer": "58" },
+  { "question": "Calcule 123 − 47.", "options": ["76", "75", "77", "74"], "correctAnswer": "76" },
+  { "question": "Quanto é 90 − 36?", "options": ["54", "53", "55", "56"], "correctAnswer": "54" },
+  { "question": "Calcule 150 − 75.", "options": ["75", "76", "74", "73"], "correctAnswer": "75" },
+  { "question": "Quanto é 88 − 44?", "options": ["42", "44", "43", "45"], "correctAnswer": "44" },
+  { "question": "Calcule 67 − 29.", "options": ["38", "37", "39", "36"], "correctAnswer": "38" },
+  { "question": "Quanto é 120 − 58?", "options": ["62", "61", "63", "60"], "correctAnswer": "62" },
+  { "question": "Calcule 99 − 33.", "options": ["66", "65", "67", "64"], "correctAnswer": "66" },
+  { "question": "Quanto é 76 − 19?", "options": ["56", "57", "55", "58"], "correctAnswer": "57" },
+  { "question": "Calcule 50 − 25.", "options": ["24", "25", "26", "23"], "correctAnswer": "25" },
+
+
+  { "question": "Se hoje é segunda-feira, que dia será daqui a 3 dias?", "options": ["Quinta", "Quarta", "Sábado", "Sexta"], "correctAnswer": "Quinta" },
+  { "question": "Se 2 + 3 = 5 e 5 − 2 = ?", "options": ["3", "2", "5", "4"], "correctAnswer": "3" },
+  { "question": "Qual é o próximo número na sequência: 2, 4, 6, 8, ?", "options": ["9", "10", "11", "12"], "correctAnswer": "10" },
+  { "question": "Se todos os cães são animais e Rex é um cão, Rex é um?", "options": ["Animal", "Planta", "Mineral", "Nada"], "correctAnswer": "Animal" },
+  { "question": "Qual é o próximo número na sequência: 5, 10, 15, ?", "options": ["20", "25", "18", "15"], "correctAnswer": "20" },
+  { "question": "Se João tem mais maçãs que Pedro e Pedro tem 3, quem tem mais?", "options": ["João", "Pedro", "Igual", "Não dá para saber"], "correctAnswer": "João" },
+  { "question": "Qual número completa a sequência: 1, 4, 9, 16, ?", "options": ["20", "25", "24", "30"], "correctAnswer": "25" },
+  { "question": "Se todos os pássaros podem voar e o pinguim é um pássaro, o pinguim pode voar?", "options": ["Não", "Sim", "Depende", "Alguns"], "correctAnswer": "Não" },
+  { "question": "Qual número completa a sequência: 3, 6, 12, 24, ?", "options": ["48", "50", "46", "45"], "correctAnswer": "48" },
+  { "question": "Se Maria tem 5 laranjas e come 2, quantas sobram?", "options": ["3", "2", "4", "5"], "correctAnswer": "3" }
 ]
