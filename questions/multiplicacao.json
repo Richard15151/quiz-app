@@ -1,0 +1,233 @@
+{
+  "easy": [
+    {
+      "question": "Quanto é 3 × 4?",
+      "options": ["12", "11", "13", "14"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Quanto é 5 × 2?",
+      "options": ["10", "9", "11", "12"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Quanto é 6 × 3?",
+      "options": ["18", "17", "19", "16"],
+      "correctAnswer": "18"
+    },
+    {
+      "question": "Quanto é 7 × 2?",
+      "options": ["14", "15", "13", "12"],
+      "correctAnswer": "14"
+    },
+    {
+      "question": "Quanto é 4 × 5?",
+      "options": ["20", "19", "21", "18"],
+      "correctAnswer": "20"
+    },
+    {
+      "question": "Quanto é 8 × 2?",
+      "options": ["16", "15", "17", "14"],
+      "correctAnswer": "16"
+    },
+    {
+      "question": "Quanto é 9 × 3?",
+      "options": ["27", "26", "28", "25"],
+      "correctAnswer": "27"
+    },
+    {
+      "question": "Quanto é 6 × 4?",
+      "options": ["24", "23", "25", "22"],
+      "correctAnswer": "24"
+    },
+    {
+      "question": "Quanto é 5 × 5?",
+      "options": ["25", "24", "26", "23"],
+      "correctAnswer": "25"
+    },
+    {
+      "question": "Quanto é 7 × 3?",
+      "options": ["21", "20", "22", "23"],
+      "correctAnswer": "21"
+    },
+    {
+      "question": "Quanto é 4 × 6?",
+      "options": ["24", "23", "25", "26"],
+      "correctAnswer": "24"
+    },
+    {
+      "question": "Quanto é 2 × 9?",
+      "options": ["18", "17", "19", "16"],
+      "correctAnswer": "18"
+    },
+    {
+      "question": "Quanto é 3 × 7?",
+      "options": ["21", "22", "20", "19"],
+      "correctAnswer": "21"
+    },
+    {
+      "question": "Quanto é 8 × 3?",
+      "options": ["24", "23", "25", "26"],
+      "correctAnswer": "24"
+    },
+    {
+      "question": "Quanto é 6 × 6?",
+      "options": ["36", "35", "37", "34"],
+      "correctAnswer": "36"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Calcule: 12 × 11",
+      "options": ["132", "121", "142", "122"],
+      "correctAnswer": "132"
+    },
+    {
+      "question": "Calcule: 14 × 8",
+      "options": ["112", "114", "110", "108"],
+      "correctAnswer": "112"
+    },
+    {
+      "question": "Calcule: 15 × 9",
+      "options": ["135", "136", "134", "133"],
+      "correctAnswer": "135"
+    },
+    {
+      "question": "Calcule: 18 × 7",
+      "options": ["126", "125", "127", "124"],
+      "correctAnswer": "126"
+    },
+    {
+      "question": "Calcule: 16 × 6",
+      "options": ["96", "95", "97", "98"],
+      "correctAnswer": "96"
+    },
+    {
+      "question": "Calcule: 21 × 5",
+      "options": ["105", "104", "106", "103"],
+      "correctAnswer": "105"
+    },
+    {
+      "question": "Calcule: 17 × 7",
+      "options": ["119", "118", "120", "121"],
+      "correctAnswer": "119"
+    },
+    {
+      "question": "Calcule: 13 × 12",
+      "options": ["156", "155", "157", "154"],
+      "correctAnswer": "156"
+    },
+    {
+      "question": "Calcule: 19 × 6",
+      "options": ["114", "115", "113", "112"],
+      "correctAnswer": "114"
+    },
+    {
+      "question": "Calcule: 22 × 4",
+      "options": ["88", "87", "89", "86"],
+      "correctAnswer": "88"
+    },
+    {
+      "question": "Calcule: 24 × 5",
+      "options": ["120", "121", "119", "118"],
+      "correctAnswer": "120"
+    },
+    {
+      "question": "Calcule: 18 × 9",
+      "options": ["162", "161", "163", "164"],
+      "correctAnswer": "162"
+    },
+    {
+      "question": "Calcule: 15 × 12",
+      "options": ["180", "181", "179", "182"],
+      "correctAnswer": "180"
+    },
+    {
+      "question": "Calcule: 20 × 7",
+      "options": ["140", "141", "139", "138"],
+      "correctAnswer": "140"
+    },
+    {
+      "question": "Calcule: 23 × 6",
+      "options": ["138", "137", "139", "136"],
+      "correctAnswer": "138"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Resolva: 125 × 12",
+      "options": ["1500", "1520", "1480", "1510"],
+      "correctAnswer": "1500"
+    },
+    {
+      "question": "Resolva: 87 × 29",
+      "options": ["2523", "2520", "2530", "2510"],
+      "correctAnswer": "2523"
+    },
+    {
+      "question": "Resolva: 144 × 25",
+      "options": ["3600", "3500", "3550", "3650"],
+      "correctAnswer": "3600"
+    },
+    {
+      "question": "Resolva: 76 × 38",
+      "options": ["2888", "2880", "2890", "2870"],
+      "correctAnswer": "2888"
+    },
+    {
+      "question": "Resolva: 123 × 47",
+      "options": ["5781", "5760", "5800", "5751"],
+      "correctAnswer": "5781"
+    },
+    {
+      "question": "Resolva: 215 × 33",
+      "options": ["7095", "7100", "7080", "7120"],
+      "correctAnswer": "7095"
+    },
+    {
+      "question": "Resolva: 98 × 56",
+      "options": ["5488", "5490", "5478", "5500"],
+      "correctAnswer": "5488"
+    },
+    {
+      "question": "Resolva: 142 × 39",
+      "options": ["5538", "5520", "5540", "5518"],
+      "correctAnswer": "5538"
+    },
+    {
+      "question": "Resolva: 167 × 48",
+      "options": ["8016", "8000", "8020", "7990"],
+      "correctAnswer": "8016"
+    },
+    {
+      "question": "Resolva: 134 × 27",
+      "options": ["3618", "3600", "3620", "3590"],
+      "correctAnswer": "3618"
+    },
+    {
+      "question": "Resolva: 198 × 33",
+      "options": ["6534", "6500", "6550", "6540"],
+      "correctAnswer": "6534"
+    },
+    {
+      "question": "Resolva: 245 × 46",
+      "options": ["11270", "11260", "11280", "11250"],
+      "correctAnswer": "11270"
+    },
+    {
+      "question": "Resolva: 176 × 39",
+      "options": ["6864", "6850", "6870", "6840"],
+      "correctAnswer": "6864"
+    },
+    {
+      "question": "Resolva: 199 × 58",
+      "options": ["11542", "11500", "11540", "11550"],
+      "correctAnswer": "11542"
+    },
+    {
+      "question": "Resolva: 212 × 47",
+      "options": ["9964", "9950", "9970", "9980"],
+      "correctAnswer": "9964"
+    }
+  ]
+}

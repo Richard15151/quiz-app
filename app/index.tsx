@@ -1,27 +1,37 @@
 import { useState, useEffect } from 'react';
-import { Text } from 'react-native'
+import { Text } from 'react-native';
 import QuizScreen from '../components/QuizScreen';
 import ResultScreen from '../components/ResultScreen';
-import rawQuestions from '../questions.json';
-import questions from '../questions.json';
+import WelcomeScreen from '../components/WelcomeScreen';
+import CategoryScreen from '../components/CategoryScreen';
+import addition from '../questions/adicao.json';
+import subtraction from '../questions/subtracao.json';
+import multiplication from '../questions/multiplicacao.json';
+import division from '../questions/divisao.json';
 import { Audio } from 'expo-av';
 import { Vibration } from 'react-native';
 
-// Função para tocar o som de acerto
+interface Question {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+}
+
+// Funções de áudio
 async function playCorrectSound() {
   const { sound } = await Audio.Sound.createAsync(
     require('../assets/audios/correct-choice-43861.mp3')
   );
   await sound.playAsync();
 }
-// Função para tocar o som de erro
+
 async function playWrongSound() {
   const { sound } = await Audio.Sound.createAsync(
     require('../assets/audios/error-010-206498.mp3')
   );
   await sound.playAsync();
 }
-// Função para tocar o som de vitória
+
 async function playWinSound() {
   const { sound } = await Audio.Sound.createAsync(
     require('../assets/audios/goodresult-82807.mp3')
@@ -29,7 +39,7 @@ async function playWinSound() {
   await sound.playAsync();
 }
 
-//função para embaralhar as perguntas
+// Função para embaralhar arrays
 function shuffleArray<T>(array: T[]): T[] {
   const newArray = [...array];
   for (let i = newArray.length - 1; i > 0; i--) {
@@ -39,37 +49,79 @@ function shuffleArray<T>(array: T[]): T[] {
   return newArray;
 }
 
-function getRandomQuestions(allQuestions: typeof rawQuestions, num: number) {
-  const shuffled = shuffleArray(allQuestions);
-  return shuffled.slice(0, num).map(q => ({
+// Função para pegar questões
+function getQuestions(
+  category: string,
+  difficulty: 'easy' | 'medium' | 'hard',
+  numQuestions = 10
+): Question[] {
+  let selectedQuestions: Question[] = [];
+
+  switch (category) {
+    case 'addition':
+      selectedQuestions = addition[difficulty];
+      break;
+    case 'subtraction':
+      selectedQuestions = subtraction[difficulty];
+      break;
+    case 'multiplication':
+      selectedQuestions = multiplication[difficulty];
+      break;
+    case 'division':
+      selectedQuestions = division[difficulty];
+      break;
+    case 'mixed':
+      const all = [
+        ...addition[difficulty],
+        ...subtraction[difficulty],
+        ...multiplication[difficulty],
+        ...division[difficulty],
+      ];
+      selectedQuestions = shuffleArray(all).slice(0, numQuestions);
+      break;
+    default:
+      selectedQuestions = [];
+  }
+
+  return shuffleArray(selectedQuestions).map(q => ({
     ...q,
-    options: shuffleArray(q.options), // embaralha as opções também
+    options: shuffleArray(q.options),
   }));
 }
 
-
 export default function HomePage() {
-  const [questions, setQuestions] = useState<typeof rawQuestions>([]);
+  const [showWelcome, setShowWelcome] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<'easy' | 'medium' | 'hard' | null>(null);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isOptionsDisabled, setIsOptionsDisabled] = useState(false);
   const [score, setScore] = useState(0);
   const [isQuizFinished, setIsQuizFinished] = useState(false);
 
+  // Atualiza perguntas quando categoria e dificuldade forem selecionadas
   useEffect(() => {
-  // embaralha e pega 10 perguntas no início
-  setQuestions(getRandomQuestions(rawQuestions, 10));
-  }, []);
-  
+    if (selectedCategory && selectedDifficulty) {
+      const q = getQuestions(selectedCategory, selectedDifficulty, 10);
+      setQuestions(q);
+      setCurrentQuestionIndex(0);
+      setScore(0);
+      setIsQuizFinished(false);
+      setSelectedOption(null);
+      setIsOptionsDisabled(false);
+    }
+  }, [selectedCategory, selectedDifficulty]);
+
   const currentQuestion = questions[currentQuestionIndex];
 
   const handleOptionPress = (option: string) => {
     if (option === currentQuestion.correctAnswer) {
       setScore(score + 1);
-      playCorrectSound()
-    }else{
-      playWrongSound()
-      Vibration.vibrate(400)
+      playCorrectSound();
+    } else {
+      playWrongSound();
+      Vibration.vibrate(400);
     }
     setSelectedOption(option);
     setIsOptionsDisabled(true);
@@ -82,22 +134,40 @@ export default function HomePage() {
       setIsOptionsDisabled(false);
     } else {
       setIsQuizFinished(true);
-      playWinSound()
+      playWinSound();
     }
   };
 
   const handlePlayAgain = () => {
-    setQuestions(getRandomQuestions(rawQuestions, 10)); // pega apenas 10 perguntas
-
-    setIsQuizFinished(false);
+    // Volta para tela de seleção de categoria/dificuldade
+    setSelectedCategory(null);
+    setSelectedDifficulty(null);
+    setQuestions([]);
     setCurrentQuestionIndex(0);
     setSelectedOption(null);
     setIsOptionsDisabled(false);
     setScore(0);
-    };
-    if (questions.length === 0) {
+    setIsQuizFinished(false);
+  };
+
+  // Renderização
+  if (showWelcome) {
+    return <WelcomeScreen onStart={() => setShowWelcome(false)} />;
+  }
+
+  if (!selectedCategory || !selectedDifficulty) {
+    return (
+      <CategoryScreen
+      onSelectCategory={(cat) => setSelectedCategory(cat)}
+      onSelectDifficulty={(diff) => setSelectedDifficulty(diff)}
+      />
+    );
+  }
+
+  if (questions.length === 0) {
     return <Text>Carregando perguntas...</Text>;
   }
+
   return isQuizFinished ? (
     <ResultScreen
       score={score}

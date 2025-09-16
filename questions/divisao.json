@@ -1,0 +1,233 @@
+{
+  "easy": [
+    {
+      "question": "Quanto é 20 ÷ 4?",
+      "options": ["4", "5", "6", "7"],
+      "correctAnswer": "5"
+    },
+    {
+      "question": "Quanto é 12 ÷ 3?",
+      "options": ["3", "4", "5", "6"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "Quanto é 9 ÷ 3?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": "3"
+    },
+    {
+      "question": "Quanto é 16 ÷ 4?",
+      "options": ["4", "3", "5", "6"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "Quanto é 18 ÷ 6?",
+      "options": ["3", "2", "4", "5"],
+      "correctAnswer": "3"
+    },
+    {
+      "question": "Quanto é 15 ÷ 5?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": "3"
+    },
+    {
+      "question": "Quanto é 8 ÷ 2?",
+      "options": ["3", "4", "5", "6"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "Quanto é 6 ÷ 2?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": "3"
+    },
+    {
+      "question": "Quanto é 10 ÷ 5?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": "2"
+    },
+    {
+      "question": "Quanto é 14 ÷ 7?",
+      "options": ["1", "2", "3", "4"],
+      "correctAnswer": "2"
+    },
+    {
+      "question": "Quanto é 9 ÷ 1?",
+      "options": ["8", "9", "10", "7"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Quanto é 12 ÷ 6?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": "2"
+    },
+    {
+      "question": "Quanto é 20 ÷ 5?",
+      "options": ["3", "4", "5", "6"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "Quanto é 24 ÷ 8?",
+      "options": ["2", "3", "4", "5"],
+      "correctAnswer": "3"
+    },
+    {
+      "question": "Quanto é 18 ÷ 3?",
+      "options": ["5", "6", "7", "4"],
+      "correctAnswer": "6"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Se uma pizza tem 36 pedaços e será dividida igualmente entre 6 amigos, quantos pedaços cada um receberá?",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "6"
+    },
+    {
+      "question": "Calcule: 72 ÷ 8",
+      "options": ["8", "9", "7", "6"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Calcule: 81 ÷ 9",
+      "options": ["8", "9", "10", "7"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Se 56 balas forem divididas entre 7 crianças, quantas cada uma recebe?",
+      "options": ["7", "8", "6", "9"],
+      "correctAnswer": "8"
+    },
+    {
+      "question": "Calcule: 63 ÷ 7",
+      "options": ["8", "9", "7", "6"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Se 45 lápis forem divididos entre 5 alunos, quantos lápis cada um recebe?",
+      "options": ["8", "9", "10", "11"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Calcule: 96 ÷ 12",
+      "options": ["7", "8", "9", "10"],
+      "correctAnswer": "8"
+    },
+    {
+      "question": "Se 120 páginas forem divididas em 10 dias igualmente, quantas páginas por dia?",
+      "options": ["10", "11", "12", "13"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Calcule: 144 ÷ 12",
+      "options": ["10", "11", "12", "13"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Se 63 chocolates forem divididos entre 9 crianças, quantos cada uma recebe?",
+      "options": ["6", "7", "8", "9"],
+      "correctAnswer": "7"
+    },
+    {
+      "question": "Calcule: 80 ÷ 8",
+      "options": ["9", "10", "11", "8"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Se 100 reais forem divididos entre 4 amigos, quanto cada um recebe?",
+      "options": ["24", "25", "26", "27"],
+      "correctAnswer": "25"
+    },
+    {
+      "question": "Calcule: 144 ÷ 16",
+      "options": ["8", "9", "10", "7"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Se 56 páginas forem divididas igualmente entre 7 dias, quantas por dia?",
+      "options": ["7", "8", "9", "6"],
+      "correctAnswer": "8"
+    },
+    {
+      "question": "Calcule: 81 ÷ 3",
+      "options": ["26", "27", "28", "25"],
+      "correctAnswer": "27"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Resolva: 144 ÷ 12 ÷ 2",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "6"
+    },
+    {
+      "question": "Resolva: 360 ÷ 15 ÷ 2",
+      "options": ["11", "12", "10", "13"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Resolva: 480 ÷ 16 ÷ 3",
+      "options": ["9", "10", "8", "11"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Resolva: 252 ÷ 7 ÷ 3",
+      "options": ["10", "11", "12", "9"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Resolva: 600 ÷ 25 ÷ 2",
+      "options": ["11", "12", "13", "10"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Resolva: 720 ÷ 12 ÷ 5",
+      "options": ["11", "12", "10", "13"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Resolva: 864 ÷ 24 ÷ 3",
+      "options": ["11", "12", "10", "13"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Resolva: 990 ÷ 33 ÷ 3",
+      "options": ["9", "10", "11", "12"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Resolva: 1080 ÷ 36 ÷ 5",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "6"
+    },
+    {
+      "question": "Resolva: 1200 ÷ 50 ÷ 4",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "6"
+    },
+    {
+      "question": "Resolva: 1440 ÷ 60 ÷ 3",
+      "options": ["7", "8", "9", "10"],
+      "correctAnswer": "8"
+    },
+    {
+      "question": "Resolva: 1800 ÷ 75 ÷ 4",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "6"
+    },
+    {
+      "question": "Resolva: 2025 ÷ 45 ÷ 5",
+      "options": ["8", "9", "10", "11"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "Resolva: 2400 ÷ 60 ÷ 8",
+      "options": ["4", "5", "6", "7"],
+      "correctAnswer": "5"
+    },
+    {
+      "question": "Resolva: 2700 ÷ 90 ÷ 3",
+      "options": ["9", "10", "11", "12"],
+      "correctAnswer": "10"
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "easy": [
+    {
+      "question": "Quanto é 13 + 14?",
+      "options": [
+        "27",
+        "12",
+        "24",
+        "37"
+      ],
+      "correctAnswer": "27"
+    },
+    {
+      "question": "Quanto é 16 + 12?",
+      "options": [
+        "38",
+        "28",
+        "23",
+        "43"
+      ],
+      "correctAnswer": "28"
+    },
+    {
+      "question": "Quanto é 7 + 8?",
+      "options": [
+        "14",
+        "16",
+        "15",
+        "13"
+      ],
+      "correctAnswer": "15"
+    },
+    {
+      "question": "Quanto é 9 + 5?",
+      "options": [
+        "14",
+        "13",
+        "12",
+        "15"
+      ],
+      "correctAnswer": "14"
+    },
+    {
+      "question": "Quanto é 4 + 6?",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "11"
+      ],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Quanto é 2 + 3?",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "7"
+      ],
+      "correctAnswer": "5"
+    },
+    {
+      "question": "Quanto é 11 + 7?",
+      "options": [
+        "18",
+        "17",
+        "16",
+        "19"
+      ],
+      "correctAnswer": "18"
+    },
+    {
+      "question": "Quanto é 5 + 5?",
+      "options": [
+        "10",
+        "9",
+        "11",
+        "8"
+      ],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Quanto é 3 + 9?",
+      "options": [
+        "12",
+        "11",
+        "10",
+        "13"
+      ],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Quanto é 14 + 6?",
+      "options": [
+        "20",
+        "19",
+        "18",
+        "21"
+      ],
+      "correctAnswer": "20"
+    },
+    {
+      "question": "Quanto é 8 + 4?",
+      "options": [
+        "12",
+        "13",
+        "11",
+        "10"
+      ],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Quanto é 10 + 2?",
+      "options": [
+        "12",
+        "11",
+        "13",
+        "10"
+      ],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "Quanto é 1 + 7?",
+      "options": [
+        "8",
+        "7",
+        "9",
+        "6"
+      ],
+      "correctAnswer": "8"
+    },
+    {
+      "question": "Quanto é 18 + 2?",
+      "options": [
+        "20",
+        "19",
+        "21",
+        "18"
+      ],
+      "correctAnswer": "20"
+    },
+    {
+      "question": "Quanto é 6 + 6?",
+      "options": [
+        "12",
+        "11",
+        "13",
+        "10"
+      ],
+      "correctAnswer": "12"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Calcule: 43 + 29",
+      "options": [
+        "72",
+        "62",
+        "70",
+        "82"
+      ],
+      "correctAnswer": "72"
+    },
+    {
+      "question": "Se Maria tinha 34 balas e ganhou mais 16, com quantas ficou?",
+      "options": [
+        "50",
+        "48",
+        "49",
+        "52"
+      ],
+      "correctAnswer": "50"
+    },
+    {
+      "question": "Calcule: 58 + 27",
+      "options": [
+        "85",
+        "86",
+        "84",
+        "87"
+      ],
+      "correctAnswer": "85"
+    },
+    {
+      "question": "Se João tinha 47 figurinhas e recebeu 26, com quantas ficou?",
+      "options": [
+        "73",
+        "72",
+        "74",
+        "71"
+      ],
+      "correctAnswer": "73"
+    },
+    {
+      "question": "Calcule: 21 + 79",
+      "options": [
+        "100",
+        "99",
+        "101",
+        "98"
+      ],
+      "correctAnswer": "100"
+    },
+    {
+      "question": "Se Ana tinha 24 figurinhas e ganhou 18, com quantas ficou?",
+      "options": [
+        "42",
+        "41",
+        "43",
+        "40"
+      ],
+      "correctAnswer": "42"
+    },
+    {
+      "question": "Calcule: 66 + 15",
+      "options": [
+        "81",
+        "80",
+        "82",
+        "78"
+      ],
+      "correctAnswer": "81"
+    },
+    {
+      "question": "Se Pedro comprou 35 lápis e ganhou mais 22, quantos lápis tem agora?",
+      "options": [
+        "57",
+        "56",
+        "55",
+        "58"
+      ],
+      "correctAnswer": "57"
+    },
+    {
+      "question": "Calcule: 90 + 11",
+      "options": [
+        "101",
+        "100",
+        "102",
+        "99"
+      ],
+      "correctAnswer": "101"
+    },
+    {
+      "question": "Se Clara juntou 38 moedas e achou mais 47, quantas moedas ela tem?",
+      "options": [
+        "85",
+        "86",
+        "84",
+        "83"
+      ],
+      "correctAnswer": "85"
+    },
+    {
+      "question": "Calcule: 54 + 46",
+      "options": [
+        "100",
+        "99",
+        "98",
+        "101"
+      ],
+      "correctAnswer": "100"
+    },
+    {
+      "question": "Se Luís tinha 63 figurinhas e ganhou 14, com quantas ficou?",
+      "options": [
+        "77",
+        "76",
+        "78",
+        "75"
+      ],
+      "correctAnswer": "77"
+    },
+    {
+      "question": "Calcule: 37 + 28",
+      "options": [
+        "65",
+        "66",
+        "64",
+        "63"
+      ],
+      "correctAnswer": "65"
+    },
+    {
+      "question": "Se Paula tinha 12 balas e ganhou mais 73, com quantas ficou?",
+      "options": [
+        "85",
+        "84",
+        "86",
+        "83"
+      ],
+      "correctAnswer": "85"
+    },
+    {
+      "question": "Calcule: 48 + 59",
+      "options": [
+        "107",
+        "106",
+        "108",
+        "105"
+      ],
+      "correctAnswer": "107"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Resolva: 314 + 265 + 197",
+      "options": [
+        "776",
+        "814",
+        "764",
+        "756"
+      ],
+      "correctAnswer": "776"
+    },
+    {
+      "question": "Resolva: (425 + 387) + 162",
+      "options": [
+        "974",
+        "964",
+        "984",
+        "954"
+      ],
+      "correctAnswer": "974"
+    },
+    {
+      "question": "Resolva: 702 + 88 + 45",
+      "options": [
+        "835",
+        "825",
+        "845",
+        "815"
+      ],
+      "correctAnswer": "835"
+    },
+    {
+      "question": "Resolva: (215 + 389) + 406",
+      "options": [
+        "1010",
+        "1000",
+        "990",
+        "1020"
+      ],
+      "correctAnswer": "1010"
+    },
+    {
+      "question": "Resolva: 999 + 1 + 500",
+      "options": [
+        "1500",
+        "1510",
+        "1490",
+        "1520"
+      ],
+      "correctAnswer": "1500"
+    },
+    {
+      "question": "Resolva: 428 + 317 + 331",
+      "options": [
+        "1076",
+        "1066",
+        "1086",
+        "1056"
+      ],
+      "correctAnswer": "1076"
+    },
+    {
+      "question": "Quanto é 55.1 + 70.2?",
+      "options": [
+        "125.3",
+        "125.8",
+        "124.3",
+        "125.2"
+      ],
+      "correctAnswer": "125.3"
+    },
+    {
+      "question": "Resolva: (612 + 283) + 145",
+      "options": [
+        "1040",
+        "1038",
+        "1020",
+        "1048"
+      ],
+      "correctAnswer": "1040"
+    },
+    {
+      "question": "Resolva: 220 + 330 + 450",
+      "options": [
+        "1000",
+        "990",
+        "980",
+        "1010"
+      ],
+      "correctAnswer": "1000"
+    },
+    {
+      "question": "Quanto é 88.6 + 11.4?",
+      "options": [
+        "100.0",
+        "99.9",
+        "100.1",
+        "101.0"
+      ],
+      "correctAnswer": "100.0"
+    },
+    {
+      "question": "Resolva: (1000 + 250) + 375",
+      "options": [
+        "1625",
+        "1615",
+        "1635",
+        "1605"
+      ],
+      "correctAnswer": "1625"
+    },
+    {
+      "question": "Resolva: 457 + 588 + 155",
+      "options": [
+        "1200",
+        "1190",
+        "1210",
+        "1180"
+      ],
+      "correctAnswer": "1200"
+    },
+    {
+      "question": "Quanto é 123.4 + 76.6?",
+      "options": [
+        "200.0",
+        "199.9",
+        "200.1",
+        "201.0"
+      ],
+      "correctAnswer": "200.0"
+    },
+    {
+      "question": "Resolva: (345 + 678) + 23",
+      "options": [
+        "1046",
+        "1036",
+        "1056",
+        "1026"
+      ],
+      "correctAnswer": "1046"
+    },
+    {
+      "question": "Quanto é 55.1 + 70.2?",
+      "options": [
+        "125.3",
+        "124.3",
+        "125.2",
+        "125.8"
+      ],
+      "correctAnswer": "125.3"
+    }
+  ]
+}
