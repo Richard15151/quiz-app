@@ -24,12 +24,13 @@ Este projeto é um aplicativo de Quiz multiplataforma, desenvolvido com React Na
 ---
 
 ## Demonstração da Aplicação
-![videoteste](./assets/videos/videoteste.gif)
+![videoteste](./assets/videos/testequiz.gif)
 
 ---
 
 ## Funcionalidades
 
+- **Tela de categorias/dificuldade:** Possibilidade de escolha de categoria e dificuldade.
 - **Quiz Interativo:** Fluxo de perguntas e respostas com validação.
 - **Feedback Visual:** Respostas são marcadas como corretas ou incorretas instantaneamente.
 - **Placar:** Pontuação é calculada e atualizada a cada rodada.
