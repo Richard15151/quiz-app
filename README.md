@@ -1,4 +1,4 @@
-# 🏆 Quiz App - [Seu Nome Completo]
+# 🏆 Quiz App - Richard de Oliveira Ribeiro
 
 > Status do Projeto: Concluído ✔️
 
