@@ -35,6 +35,8 @@ export default function WelcomeScreen({ onStart, logoSource }: WelcomeScreenProp
   return (
     <LinearGradient colors={["#E6F3FF", "#F9FBFF"]} style={styles.container}>
       <SafeAreaView style={styles.safe}>
+        {logoSource ? <Image source={logoSource} style={styles.heroImage} /> : null}
+
         <Animated.View
           style={[
             styles.card,
@@ -48,7 +50,6 @@ export default function WelcomeScreen({ onStart, logoSource }: WelcomeScreenProp
             },
           ]}
         >
-          {logoSource ? <Image source={logoSource} style={styles.logo} /> : null}
 
           <Text style={styles.title}>Bem-vindo ao MathMagic</Text>
           <Text style={styles.subtitle}>
@@ -150,5 +151,11 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 18,
     fontWeight: '700',
+  },
+  heroImage: {
+    width: 200,
+    height: 200,
+    resizeMode: "contain",
+    marginBottom: 20,
   },
 });

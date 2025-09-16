@@ -1,44 +1,33 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useState } from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-interface CategoryScreenProps {
-  onSelectCategory: (category: string) => void;
-  onSelectDifficulty: (difficulty: 'easy' | 'medium' | 'hard') => void;
-}
-
-const categories = [
-  { id: 'addition', label: 'Adição' },
-  { id: 'subtraction', label: 'Subtração' },
-  { id: 'multiplication', label: 'Multiplicação' },
-  { id: 'division', label: 'Divisão' },
-  { id: 'mixed', label: 'Mista' },
-];
-
-const difficulties: { id: 'easy' | 'medium' | 'hard'; label: string }[] = [
-  { id: 'easy', label: 'Fácil' },
-  { id: 'medium', label: 'Médio' },
-  { id: 'hard', label: 'Difícil' },
-];
-
-export default function CategoryScreen({ onSelectCategory, onSelectDifficulty }: CategoryScreenProps) {
+export default function CategoryScreen({
+  onStart,
+  onBack,
+}: {
+  onStart: (cat: string, diff: "easy" | "medium" | "hard") => void;
+  onBack: () => void;
+}) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<"easy" | "medium" | "hard" | null>(null);
 
-  const handleCategorySelect = (category: string) => {
-    setSelectedCategory(category);
-  };
+  const categories = [
+    { id: "addition", label: "Adição" },
+    { id: "subtraction", label: "Subtração" },
+    { id: "multiplication", label: "Multiplicação" },
+    { id: "division", label: "Divisão" },
+    { id: "mixed", label: "Misto" },
+  ];
 
-  const handleStart = (difficulty: 'easy' | 'medium' | 'hard') => {
-    if (selectedCategory) {
-      onSelectCategory(selectedCategory);
-      onSelectDifficulty(difficulty);
-    } else {
-      alert('Selecione uma categoria primeiro!');
-    }
-  };
+  const difficulties = [
+    { id: "easy", label: "Fácil" },
+    { id: "medium", label: "Médio" },
+    { id: "hard", label: "Difícil" },
+  ];
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Escolha uma Categoria</Text>
+      <Text style={styles.title}>Escolha a categoria</Text>
 
       <View style={styles.categoriesContainer}>
         {categories.map((cat) => (
@@ -48,7 +37,7 @@ export default function CategoryScreen({ onSelectCategory, onSelectDifficulty }:
               styles.categoryButton,
               selectedCategory === cat.id && styles.selectedButton,
             ]}
-            onPress={() => handleCategorySelect(cat.id)}
+            onPress={() => setSelectedCategory(cat.id)}
           >
             <Text
               style={[
@@ -62,18 +51,44 @@ export default function CategoryScreen({ onSelectCategory, onSelectDifficulty }:
         ))}
       </View>
 
-      <Text style={styles.title}>Escolha a Dificuldade</Text>
+      <Text style={styles.title}>Escolha a dificuldade</Text>
+
       <View style={styles.categoriesContainer}>
-        {difficulties.map((dif) => (
+        {difficulties.map((diff) => (
           <TouchableOpacity
-            key={dif.id}
-            style={styles.difficultyButton}
-            onPress={() => handleStart(dif.id)}
+            key={diff.id}
+            style={[
+              styles.difficultyButton,
+              selectedDifficulty === diff.id && styles.selectedButton,
+            ]}
+            onPress={() =>
+              setSelectedDifficulty(diff.id as "easy" | "medium" | "hard")
+            }
           >
-            <Text style={styles.difficultyText}>{dif.label}</Text>
+            <Text
+              style={[
+                styles.difficultyText,
+                selectedDifficulty === diff.id && styles.selectedText,
+              ]}
+            >
+              {diff.label}
+            </Text>
           </TouchableOpacity>
         ))}
       </View>
+
+      {selectedCategory && selectedDifficulty && (
+        <TouchableOpacity
+          style={styles.startButton}
+          onPress={() => onStart(selectedCategory, selectedDifficulty)}
+        >
+          <Text style={styles.startButtonText}>Iniciar</Text>
+        </TouchableOpacity>
+      )}
+
+      <TouchableOpacity style={styles.backButton} onPress={onBack}>
+        <Text style={styles.backButtonText}>← Voltar ao início</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -90,12 +105,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 15,
     textAlign: 'center',
+    color: '#1F2D4D',
   },
   categoriesContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginBottom: 30,
+    marginBottom: 20,
   },
   categoryButton: {
     backgroundColor: '#ffffff',
@@ -107,17 +123,6 @@ const styles = StyleSheet.create({
     minWidth: 100,
     alignItems: 'center',
   },
-  selectedButton: {
-    backgroundColor: '#007BFF',
-  },
-  categoryText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#007BFF',
-  },
-  selectedText: {
-    color: '#ffffff',
-  },
   difficultyButton: {
     backgroundColor: '#ffffff',
     borderRadius: 12,
@@ -128,9 +133,47 @@ const styles = StyleSheet.create({
     minWidth: 100,
     alignItems: 'center',
   },
+  selectedButton: {
+    backgroundColor: '#007BFF',
+  },
+  categoryText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#007BFF',
+  },
   difficultyText: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#28A745',
+  },
+  selectedText: {
+    color: '#ffffff',
+  },
+  startButton: {
+    backgroundColor: '#007BFF',
+    padding: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  startButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  backButton: {
+    marginTop: 20,
+    padding: 12,
+    borderRadius: 8,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#2852a7ff',
+  },
+  backButtonText: {
+    textAlign: 'center',
+    color:'#2852a7ff',
+    fontSize: 16,
   },
 });

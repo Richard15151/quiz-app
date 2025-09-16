@@ -99,6 +99,7 @@ export default function HomePage() {
   const [isOptionsDisabled, setIsOptionsDisabled] = useState(false);
   const [score, setScore] = useState(0);
   const [isQuizFinished, setIsQuizFinished] = useState(false);
+  
 
   // Atualiza perguntas quando categoria e dificuldade forem selecionadas
   useEffect(() => {
@@ -152,17 +153,20 @@ export default function HomePage() {
 
   // Renderização
   if (showWelcome) {
-    return <WelcomeScreen onStart={() => setShowWelcome(false)} />;
+    return <WelcomeScreen onStart={() => setShowWelcome(false)} logoSource={require('../assets/images/logo.png')} />;
   }
 
   if (!selectedCategory || !selectedDifficulty) {
     return (
-      <CategoryScreen
-      onSelectCategory={(cat) => setSelectedCategory(cat)}
-      onSelectDifficulty={(diff) => setSelectedDifficulty(diff)}
-      />
-    );
-  }
+    <CategoryScreen
+      onStart={(cat, diff) => {
+        setSelectedCategory(cat);
+        setSelectedDifficulty(diff);
+      }}
+      onBack={() => setShowWelcome(true)}
+    />
+  );
+}
 
   if (questions.length === 0) {
     return <Text>Carregando perguntas...</Text>;
